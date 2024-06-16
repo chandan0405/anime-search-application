@@ -1,38 +1,255 @@
-.App {
-  text-align: center;
+/* -----------------homePage css--------------- */
+* {
+  box-sizing: border-box;
+  font-family: "Short Stack", cursive;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.home-container {
   display: flex;
   flex-direction: column;
   align-items: center;
+  min-height: 100vh;
+  background-color: #201502;
+  /* background: rgb(4, 1, 66); 
+  background: linear-gradient(90deg, rgba(5,1,76,1) 0%, rgba(9,9,121,1) 74%, rgba(10,125,149,1) 100%); */
+  /* background-image: url("../src/assets/images/anime4.jpg");
+  background-repeat: no-repeat;
+  background-size: cover; */
+}
+
+.home-logo-container {
+  position: absolute;
+  display: flex;
+  width: 100%;
+}
+
+.logo {
+  position: relative;
+  height: 60px;
+  width: auto;
+  margin-left: 10px;
+  margin-top: 6px;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.logo-name {
+  position: absolute;
+  font-size: 24px;
+  color: #FFFFFF;
+  margin-top: 0;
+  margin-right: 84em;
+  margin-left: 74px;
+  vertical-align: middle;
+  margin-top: 21px;
+}
+
+
+.home-container h1 {
+  color: #fff;
+}
+
+.content-container {
+  flex-grow: 1;
+  /* Allow this container to grow and take available space */
+}
+
+.home__input-container {
+  display: flex;
+  height: 60px;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  border-radius: 18px;
+  display: flex;
+  align-items: center;
+  padding-left: 10px;
+  background-color: #ffffff;
+  width: 500px;
+  max-width: 100%;
+}
+
+.home__input-container:active {
+  box-shadow: 0 0 10px rgba(0, 0, 0 0.3);
+  border: 1px solid rgba(0, 0, 0, 0. 6);
+  transform: scale(1.01);
+}
+
+
+.home__input-icon-container {
+  max-width: fit-content;
+
+}
+
+.search-icon {
+  height: 26px;
+  width: 30px;
+}
+
+.home_input-box {
+  width: 100%;
+  border-radius: 20px;
+  border: none;
+  outline: none;
+  font-size: 20px;
+  padding: 10px;
+  max-height: fit-content;
+  font-weight: 500;
+}
+
+.line {
+  width: 100%;
+  size: 2;
+}
+.loading{
+  color: #FFFFFF;
+  font-size: 30px;
+}
+
+.home_total-record {
+  margin-top: 26px;
+  color: #ffffff;
+}
+
+/* -----------------Animacard css------------------------------------ */
+/* -----------------Animacard css------------------------------------ */
+.anime-container {
+  display: flex;
+  border: 1px solid #61481C;
+  max-width: 100%;
+  max-height: 100%;
+  width: 1200px;
+  margin: 0 auto;
+  margin-bottom: 24px;
+  background-color: #FFFFFF;
+  border-radius: 10px;
+  margin-top: 10px;
+}
+
+
+
+.anime-image {
+  height: 160px;
+  width: 147px;
+  margin-left: 10px;
+  margin-top: 8px;
+  border-radius: 8px;
+  margin-bottom: 6px;
+}
+
+.anime-nickname {
+  display: flex;
+  gap: 8px;
+}
+
+.anime-nickname p {
+  border: 1px solid #61481C;
+  padding: 4px;
+  font-weight: 600;
+  border-radius: 4px;
+}
+
+.anime-title {
+  margin-left: 30px;
+  flex: 1;
+}
+
+.anime-title h4 {
+  font-size: 20px;
+}
+
+.anime-favourite {
+  display: flex;
+  margin-top: 30px;
+  margin-right: 20px;
+}
+
+.heart-img {
+  height: 25px;
+  width: 30px;
+  margin-top: 4px;
+}
+
+.anime-favourite span {
+  font-size: 20px;
+}
+
+.anime-detail {
+  display: flex;
+  align-items: center;
+  border-left: 2px solid #61481C;
+  padding-left: 10px;
+}
+
+.next-page-icon {
+  height: 100%;
+  width: 70px;
+  padding: 20px;
+  cursor: pointer;
+  margin-right: 5px;
+
+}
+
+.next-page-icon:hover {
+  background-color: #e7e4e4;
+  border-radius: 50%;
+  transform: scale(1.05);
+}
+
+/* -----------------Pagination css------------------------------------ */
+/* -----------------Pagination css------------------------------------ */
+/* Ensure this file is imported in your component file */
+/* Ensure this file is imported in your component file */
+
+.pagination-container {
+  width: 100%;
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  bottom: 0;
+  flex: 1;
 }
 
-.App-link {
-  color: #61dafb;
+.left-icon-container,
+.right-icon-container {
+  margin: 0 10px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background-color 0.2s ease, transform 0.2s ease, filter 0.2s ease;
+  border: 1px solid;
+  padding: 8px;
+  background: #f9dcdc;
+
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.left-icon,
+.right-icon {
+  width: 30px;
+  height: 30px;
+}
+
+.left-icon-container:hover,
+.right-icon-container:hover {
+  transform: scale(1.1);
+  filter: brightness(1.2);
+  background: rgb(247 240 240 / 70%);
+}
+
+
+.left-icon-container:active,
+.right-icon-container:active {
+  transform: scale(1);
+  filter: brightness(1);
+  background: rgba(161, 145, 145, 0.7);
+}
+
+.no-record {
+  font-size: 24px;
+  font-weight: bold;
+  letter-spacing: 2px;
+  color: #ffffff;
+}
+
+.page-info {
+  color: #ffffff;
 }
